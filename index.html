@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ethan Williams | Physics Major and EMT at BYU-Idaho</title>
+  <meta name="description" content="Physics major (pre-medical emphasis) at BYU-Idaho. Certified EMT with medical physics research experience, Python, and fluent Spanish.">
+  <meta name="author" content="Ethan Williams">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfcfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1217" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ethan Williams | Physics Major and EMT at BYU-Idaho">
+  <meta property="og:description" content="Physics major (pre-medical emphasis) at BYU-Idaho. Certified EMT with medical physics research experience, Python, and fluent Spanish.">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Ethan">
+  <meta property="profile:last_name" content="Williams">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Inline icon, so the page makes no extra requests -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5cad'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' text-anchor='middle' fill='white'%3EEW%3C/text%3E%3C/svg%3E">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ethan Williams",
+    "email": "mailto:ecwill9@gmail.com",
+    "description": "Physics major with a pre-medical emphasis and an engineering minor at Brigham Young University-Idaho. Certified EMT.",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Brigham Young University-Idaho"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Mesa Community College"
+    },
+    "knowsLanguage": "Spanish",
+    "knowsAbout": ["Physics", "Python", "Emergency medical services"],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "NREMT Certification",
+      "description": "Valid February 2026 to February 2028"
+    }
+  }
+  </script>
+
+  <style>
+    /* ---------- Colors: defined once, here ---------- */
+    :root {
+      color-scheme: light dark;
+
+      --bg: #fbfcfd;
+      --surface: #ffffff;
+      --text: #14181f;
+      --muted: #4b5563;
+      --line: #d5dae1;
+      --accent: #0b5cad;
+      --accent-strong: #084a8c;
+      --on-accent: #ffffff;
+      --chip-bg: #eef3f9;
+
+      --font-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+      --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+      --gutter: 16px;
+      --measure: 62ch;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1217;
+        --surface: #151b23;
+        --text: #e9edf2;
+        --muted: #a6b0bd;
+        --line: #2a323d;
+        --accent: #7ab8ff;
+        --accent-strong: #a5cfff;
+        --on-accent: #0e1217;
+        --chip-bg: #1a2330;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      :root { --gutter: 32px; }
+    }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 1rem/1.6 var(--font-sans);
+      overflow-wrap: break-word;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 62rem;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    a { color: var(--accent); text-underline-offset: 0.2em; }
+    a:hover { color: var(--accent-strong); }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    ul, ol { margin: 0; padding: 0; list-style: none; }
+    p { margin: 0; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .print-only { display: none; }
+
+    .skip-link {
+      position: absolute;
+      left: var(--gutter);
+      top: -4rem;
+      z-index: 100;
+      padding: 0.6rem 1rem;
+      background: var(--surface);
+      color: var(--text);
+      border: 2px solid var(--accent);
+      border-radius: 4px;
+    }
+    .skip-link:focus { top: 0.75rem; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-header .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0 1.5rem;
+      padding-block: 0.5rem;
+    }
+
+    .brand {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--text);
+      text-decoration: none;
+      padding-block: 0.6rem;
+    }
+    .brand:hover { color: var(--text); }
+
+    .site-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 1.25rem;
+    }
+
+    .site-nav a {
+      display: inline-block;
+      padding-block: 0.6rem;
+      color: var(--muted);
+      text-decoration: none;
+      text-underline-offset: 0.4em;
+      text-decoration-thickness: 2px;
+      text-decoration-color: transparent;
+    }
+    .site-nav a:hover,
+    .site-nav a[aria-current] {
+      color: var(--text);
+      text-decoration-line: underline;
+      text-decoration-color: var(--accent);
+    }
+
+    @media (min-width: 48rem) {
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+    }
+
+    /* ---------- Buttons ---------- */
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.55rem 1.25rem;
+      border: 2px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--on-accent);
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.15s, border-color 0.15s;
+    }
+    .btn:hover {
+      background: var(--accent-strong);
+      border-color: var(--accent-strong);
+      color: var(--on-accent);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+    }
+    .btn-outline:hover {
+      background: transparent;
+      color: var(--accent-strong);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding-block: clamp(2.5rem, 9vw, 5.5rem) clamp(2.25rem, 6vw, 3.5rem);
+    }
+
+    .hero h1 {
+      margin: 0 0 1rem;
+      font: 700 clamp(2.5rem, 9vw, 4.75rem)/1.02 var(--font-serif);
+      letter-spacing: -0.025em;
+    }
+
+    .hero .title {
+      max-width: 34ch;
+      font-size: clamp(1.125rem, 2.6vw, 1.5rem);
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .hero .intro {
+      max-width: var(--measure);
+      margin-top: 1.25rem;
+      color: var(--muted);
+      font-size: 1.0625rem;
+    }
+
+    /* ---------- Sections ---------- */
+    .section {
+      border-top: 1px solid var(--line);
+      padding-block: 2.5rem;
+    }
+
+    .section .wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 52rem) {
+      .section .wrap {
+        grid-template-columns: 11rem minmax(0, 1fr);
+        gap: 2.5rem;
+      }
+    }
+
+    .section h2 {
+      margin: 0;
+      font: 700 1.5rem/1.2 var(--font-serif);
+      letter-spacing: -0.01em;
+    }
+
+    .entries > li + li { margin-top: 1.75rem; }
+
+    .entry h3 {
+      margin: 0;
+      font-size: 1.0625rem;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 0.9rem;
+      margin: 0.15rem 0 0.5rem;
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+    .meta .org { color: var(--text); }
+
+    .entry p:not(.meta) { max-width: var(--measure); }
+
+    .subhead {
+      margin: 0 0 0.6rem;
+      font-size: 1.0625rem;
+      font-weight: 650;
+    }
+    .group + .group { margin-top: 1.75rem; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .chips li {
+      padding: 0.3rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--chip-bg);
+    }
+
+    .contact-email {
+      font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+      font-family: var(--font-serif);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding-block: 1.5rem 2.5rem;
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+    .site-footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem 1.5rem;
+    }
+
+    /* ---------- Print: a clean one- or two-page resume ---------- */
+    @media print {
+      :root {
+        --bg: #fff;
+        --surface: #fff;
+        --text: #000;
+        --muted: #333;
+        --line: #999;
+        --accent: #000;
+        --accent-strong: #000;
+        --on-accent: #fff;
+        --chip-bg: #fff;
+        --gutter: 0px;
+        --measure: none;
+      }
+
+      @page { margin: 14mm 16mm; }
+
+      html { scroll-padding-top: 0; }
+      body { font-size: 10pt; line-height: 1.4; }
+
+      .skip-link, .site-header, .actions, .site-footer, .no-print { display: none !important; }
+      .print-only { display: block; }
+
+      a { color: inherit; text-decoration: none; }
+
+      .hero { padding-block: 0 1rem; }
+      .hero h1 { font-size: 26pt; margin-bottom: 0.25rem; }
+      .hero .title { font-size: 12pt; max-width: none; }
+      .hero .intro { font-size: 10pt; margin-top: 0.6rem; max-width: none; }
+      .print-only { margin-top: 0.25rem; }
+
+      .section { padding-block: 0.9rem; break-inside: auto; }
+      .section:not(#experience) { break-inside: avoid; }
+      .section .wrap { grid-template-columns: 1fr; gap: 0.5rem; }
+      .section h2 { font-size: 13pt; break-after: avoid; }
+      .entry { break-inside: avoid; }
+      .entries > li + li { margin-top: 0.8rem; }
+      .meta { font-size: 9.5pt; margin-bottom: 0.2rem; }
+      .chips li { padding: 0.1rem 0.5rem; }
+      .contact-email { font-size: 12pt; }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Ethan Williams</a>
+      <nav class="site-nav" aria-label="Page sections">
+        <ul>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="intro-heading">
+      <div class="wrap">
+        <h1 id="intro-heading">Ethan Williams</h1>
+        <p class="title">Physics major with a pre-medical emphasis, and a certified EMT, at Brigham Young University-Idaho.</p>
+        <p class="print-only">ecwill9@gmail.com</p>
+        <p class="intro">I study physics with a pre-medical emphasis and an engineering minor. I'm a certified EMT, I've worked on a medical physics research team, and I run a weekly campus volunteer activity at a care facility. I'm fluent in Spanish, which I learned during two years of service in Colombia.</p>
+        <div class="actions">
+          <a class="btn" href="Ethan-Williams-CV.pdf" target="_blank" rel="noopener">CV<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+          <a class="btn btn-outline" href="mailto:ecwill9@gmail.com">Email me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="wrap">
+        <h2 id="experience-heading">Experience</h2>
+        <ol class="entries">
+          <li class="entry">
+            <h3>CNC Operator</h3>
+            <p class="meta">
+              <span class="org">Saguaro Skies Cabinetry</span>
+              <span class="dates"><time datetime="2026-07">Jul 2026</time> – <time datetime="2026-09">Sep 2026</time></span>
+            </p>
+            <p>Operated a CNC machine to cut the parts that were assembled into cabinets.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Volunteer EMT</h3>
+            <p class="meta">
+              <span class="org">BYU-Idaho</span>
+              <span class="dates"><time datetime="2026-04">Apr 2026</time> – Present</span>
+            </p>
+            <p>Provide standby EMS coverage at school events.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Team Researcher</h3>
+            <p class="meta">
+              <span class="org">Medical Physics Research Team</span>
+              <span class="dates"><time datetime="2026-01">Jan 2026</time> – <time datetime="2026-04">Apr 2026</time></span>
+            </p>
+            <p>Worked with a team to develop a system that measures the output of a radioactive source so its Bragg peak can be graphed.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Bowling Attendant</h3>
+            <p class="meta">
+              <span class="org">BYU-Idaho Bowling Alley</span>
+              <span class="dates"><time datetime="2025-05">May 2025</time> – <time datetime="2026-09">Sep 2026</time></span>
+            </p>
+            <p>Ran the front end of the alley and fixed the machines.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Activity Director</h3>
+            <p class="meta">
+              <span class="org">Adopt-a-Grandparent, BYU-Idaho</span>
+              <span class="dates"><time datetime="2025-01">Jan 2025</time> – Present</span>
+            </p>
+            <p>Manage a campus volunteer activity in which students visit a care facility every Sunday. I handle the event logistics each week, both on my own and with partners.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Sales Associate</h3>
+            <p class="meta">
+              <span class="org">Seagull Book, Mesa, AZ</span>
+              <span class="dates"><time datetime="2023-10">Oct 2023</time> – <time datetime="2024-09">Sep 2024</time></span>
+            </p>
+            <p>Worked as a sales clerk, and stocked and maintained the store.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Hospitality Aide</h3>
+            <p class="meta">
+              <span class="org">Montecito Post Acute Care, Mesa, AZ</span>
+              <span class="dates"><time datetime="2023-10">Oct 2023</time> – <time datetime="2024-04">Apr 2024</time></span>
+            </p>
+            <p>Assisted patients in a large care facility in non-clinical ways, and was glad to make their days a little better.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Church Representative</h3>
+            <p class="meta">
+              <span class="org">LDS Church Mission, Colombia</span>
+              <span class="dates"><time datetime="2021-07">Jul 2021</time> – <time datetime="2023-07">Jul 2023</time></span>
+            </p>
+            <p>Worked with and managed others, and planned and carried out strategies to improve how our assignments were performed. Became fluent in Spanish.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-heading">
+      <div class="wrap">
+        <h2 id="education-heading">Education and certification</h2>
+        <ol class="entries">
+          <li class="entry">
+            <h3>Brigham Young University-Idaho</h3>
+            <p class="meta">
+              <span class="org">Rexburg, ID</span>
+              <span class="dates"><time datetime="2024-09">Sep 2024</time> – <time datetime="2028-12">Dec 2028</time></span>
+            </p>
+            <p>Physics major with a pre-medical emphasis and an engineering minor. Currently attending. GPA: 3.02.</p>
+          </li>
+
+          <li class="entry">
+            <h3>Mesa Community College</h3>
+            <p class="meta">
+              <span class="org">Mesa, AZ</span>
+              <span class="dates"><time datetime="2023-08">Aug 2023</time> – <time datetime="2024-04">Apr 2024</time></span>
+            </p>
+            <p>Studied business for two semesters.</p>
+          </li>
+
+          <li class="entry">
+            <h3>NREMT Certification</h3>
+            <p class="meta">
+              <span class="dates">Valid <time datetime="2026-02">Feb 2026</time> – <time datetime="2028-02">Feb 2028</time></span>
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="wrap">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="entry">
+          <h3>Stellar Data Analysis</h3>
+          <p class="meta">
+            <span class="org">Final project for a Python class</span>
+          </p>
+          <p>Took a small dataset of stars and plotted a Hertzsprung–Russell diagram from it, comparing both luminosity and magnitude against temperature.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="wrap">
+        <h2 id="skills-heading">Skills and languages</h2>
+        <div>
+          <div class="group">
+            <h3 class="subhead">Skills</h3>
+            <ul class="chips">
+              <li>Python (Intermediate)</li>
+              <li>Team management</li>
+              <li>Leadership</li>
+              <li>EMT certified</li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3 class="subhead">Languages</h3>
+            <ul class="chips">
+              <li>Spanish (Fluent)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <h2 id="contact-heading">Contact</h2>
+        <div>
+          <p class="contact-email"><a href="mailto:ecwill9@gmail.com">ecwill9@gmail.com</a></p>
+          <div class="actions">
+            <a class="btn" href="Ethan-Williams-CV.pdf" target="_blank" rel="noopener">CV<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year">2026</span> Ethan Williams</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Footer year
+      var year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      // Mark the nav link for the section currently in view
+      if (!('IntersectionObserver' in window)) return;
+      var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a[href^="#"]'));
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (a) { a.removeAttribute('aria-current'); });
+          var link = byId[entry.target.id];
+          if (link) link.setAttribute('aria-current', 'location');
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+
+      Object.keys(byId).forEach(function (id) {
+        var section = document.getElementById(id);
+        if (section) observer.observe(section);
+      });
+    })();
+  </script>
+</body>
+</html>
